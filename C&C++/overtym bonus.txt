@@ -1,0 +1,26 @@
+#include<stdio.h>
+main()
+{
+    int hour[10],pay[10],i,j,a;
+    
+     for(i=1;i<11;i++)
+     {
+       printf("enter the no of hours worked by employee %d :",i);
+       scanf("%d",&hour[i-1]);
+       
+       a=hour[i-1]-40;
+       
+        if(a>0)
+       {
+       pay[i-1]=12*a;
+         printf("\nthe bonus for employee %d is = %d\n",i,pay[i-1]);
+       }
+       
+       else
+       {
+           printf("\nsorry fuck off\nwork your ass more.\n ");
+       }
+       
+     }
+     
+}

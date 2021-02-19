@@ -1,0 +1,122 @@
+// Define a class to represent a book in a library. 
+// Include the following members: -
+
+// Data Members: 
+// Book Number, Book Name, Author, Publisher, Price, No. of copies issued, No. of copies
+ 
+// Member Functions:
+// (i)	To assign initial values 
+// (ii)	To issue a book after checking for its availability 
+// (iii)To return a book 
+// (iv)	To display book information
+
+#include <iostream>
+using namespace std;
+int number_of_books_add=0;
+
+//creating a class named book
+class book
+{
+  char book_name[100]; //string for name
+  int book_number; 
+  float price;
+  char author[100];
+  char publisher[100];
+  int tot_cop,left_cop; //total copis and left copies.
+  
+  public:
+  
+  //default constructor
+  
+ book()
+ {
+    cout<<"\nEnter the name of the book you want to put in the library\n";
+    gets(book_name);
+    cout<<"\nEnter the name of the publisher of the above book\n";
+    gets(publisher);
+    cout<<"\nEnter the Price of the book \n";
+    cin>>price;
+    cout<<"\nEnter the number of copies you want to put in the library\n";
+    cin>>tot_cop;
+    cout<<"\nEnter the author of the book\n";
+    gets(author);
+    cout<<"\nEnter the number of the book\n";
+    cin>>book_number;
+    left_cop=tot_cop;
+    
+ }
+  void disp_details()//displays all the details of a book
+  {
+    cout<<"Here are the details:\n";
+    cout<<"NAME: "<<book_name<<"\nBOOK NUMBER: "<<book_number<<"\nPRICE: "<<price<<"\nPUBLISHER: "<<publisher<<"\n";
+    
+  }
+  
+  
+  
+};
+
+int main()
+{
+    int s1,s2;//for the switch follow
+    int x=0;//for starting the addition of teams
+    
+    cout<<"\nEnter 1 if You are the student who wants to see books\n 2 if you are here to add a book to the library\n";
+    cin>>s1;
+    
+    switch(s1)//switch case 1 for distinguishing users and management team.
+    {
+        case 1: //for students
+        {
+            if(x=!0)
+            {
+                cout<<"Hi User. Hope you are maintaining social distance.";
+                cout<<"\nEnter 1 to View all the books \n 2 to \n 3 to \n 4 to \n";
+                cin>>s2;
+                
+                switch(s2)//for flowing throufh student options
+                {
+                    
+                            case 1:
+                            {
+                                break;
+                            }
+                            case 2:
+                            {
+                                break;
+                            }
+                            case 3:
+                            {
+                                break;
+                            }
+                            case 4:
+                            {
+                                break;
+                            }
+                            default : cout<<"Invalid Input";
+                        
+                }
+            }
+            else
+            {
+                cout<<"Uh Oh! Sorry nothing is available in the library.\n First, click option 2 to add books to library";
+            }
+        }
+        case 2://for the library management team
+        {
+            cout<<"\nEnter the no. books you want to add\n";
+            cin>>number_of_books_add;
+            for(int i=1;i<=number_of_books_add;i++)
+            {
+               //create objects
+            }
+        }
+        default : cout<<"Invalid Input";
+    }
+    
+    
+    
+   
+
+    return 0;
+}

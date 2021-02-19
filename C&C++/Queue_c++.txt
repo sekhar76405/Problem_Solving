@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class push
+{
+    
+};
+
+class pop
+{
+    
+};
+
+
+int main()
+{
+    int a;
+    cout<<"press \n 1 to insert\n 2 to delete\n 3 to display\n 4 to exit"; 
+    cin>>a;
+    switch(a)
+    {
+        case 1:
+        {
+            
+            break;
+        }
+        case 2:
+        {
+            
+            break;
+        }
+        case 3:
+        {
+            
+            break;
+        }
+        case 4:
+        {
+            
+            break;
+        }
+        
+        default : cout<<"invalid input";
+    }
+   
+    return 0;
+}

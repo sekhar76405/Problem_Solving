@@ -1,0 +1,117 @@
+#include<iostream>
+using namespace std;
+
+class student
+{
+  
+  public:
+  char name[50];
+  int roll;
+  char gender;
+  
+  void student_Details()
+  {
+      cout<<"Enter the name of the student: \n";
+      cin>>name;
+      
+      cout<<"Enter the roll of the student: \n";
+      cin>>roll;
+      
+      cout<<"Enter the gender of the student(press M/F): \n ";
+      cin>>gender;
+      
+  }
+  void display_Student_Details()
+  {
+      cout<<"The name of the student: "<<name;
+      cout<<"\nThe roll of the student: "<<roll;
+      cout<<"\nThe Gender of the student: "<<gender;
+  }
+  
+  
+    
+};
+
+
+class Internal_Exam : public student
+{
+    
+           
+    public:
+
+    void getmarks()
+    {
+        
+        for(int i=1;i<=n;i++)
+        {
+            cout<<"Enter the internal marks of subject "<<i<<": ";
+            cin>>marks[i-1];
+        }
+    }
+    
+    void printmarks()
+    {
+        for(int i=1;i<=n;i++)
+        {
+            cout<<"\nThe marks of subject "<<i<<": "<<marks[i-1];
+        }
+    }
+};
+
+
+
+// class External_Exam : public student
+// {
+
+//     void getmarks()
+//     {
+//         for(int j=1;i<=n;i++)
+//         {
+//             cout<<"Enter the external marks of subject "<<i<<": ";
+//             cin>>marks[j-1];
+//         }
+//     }
+    
+//     void printmarks()
+//     {
+//         for(int j=1;j<=n;i++)
+//         {
+//             cout<<"\nThe marks of subject "<<j<<": "<<marks[j-1];
+//         }
+//     }
+  
+// };
+
+
+// class Result : public External_Exam,public Internal_Exam
+// {
+  
+//   public:
+  
+  
+    
+// };
+
+
+int main()
+{
+    int n;
+    
+    cout<<"Enter the number of subjects in internal exams : ";
+    cin>>n;
+    int marks[n];
+    
+    // student ob;
+    // ob.student_Details();
+    // ob.display_Student_Details();
+    
+    Internal_Exam ob;
+    ob.student_Details();
+    ob.display_Student_Details();
+    ob.getmarks();
+    ob.printmarks();
+    
+    
+    
+    return 0;
+}
