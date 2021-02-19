@@ -5,8 +5,8 @@ git add .
 echo "Enter the commit message: "
 read message
 
-message} > cache.txt
+echo "${message}" > cache.txt
 
 git commit -m " ${message} "
 
-git push
+#git push
