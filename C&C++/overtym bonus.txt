@@ -10,7 +10,7 @@ main()
        
        a=hour[i-1]-40;
        
-        if(a>0)
+       if(a>0)
        {
        pay[i-1]=12*a;
          printf("\nthe bonus for employee %d is = %d\n",i,pay[i-1]);
